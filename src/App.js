@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+/*  Entrypoint for building app.
+    Configure your Router and style layout by adding components.
+*/
+import { GlobalStyle } from './styling-kit/MGlobalStyle'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+        <div className='App'>
+       
+        </div>
+    </>
   );
 }
 
