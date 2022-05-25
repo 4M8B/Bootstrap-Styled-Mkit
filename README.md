@@ -1,4 +1,4 @@
-# Bootstrap based Styling kit based on styled-components (https://bootstrap-styled.github.io/v4/)
+# Bootstrap V4 based Styling kit based on styled-components (https://bootstrap-styled.github.io/v4/)
 
 # Getting Started with Create React App
 
