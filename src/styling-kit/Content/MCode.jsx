@@ -1,10 +1,10 @@
 /* 
     Attr's are the original styled-component attributes as stated on "https://bootstrap-styled.github.io/v4/".
     All ClassNames are original bootstrap classnames as found on "https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp"
-    and are by no means complete.
+    and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Code Component -- A way for displaying inline and multiline blocks of code with Bootstrap.
+    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
@@ -30,13 +30,17 @@ const theme = {
     init: {}
 }
 
-const StyledCode = styled(Code)``
+const StyledCode = styled(Code).attrs((props) => ({ 
+    className: ''
+})
+)``
 
 export default class MyStyledCode extends Component {
     render(){
+        const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledCode theme={theme.init}>
+            <StyledCode {...props} theme={theme.init}>
                 {children}
             </StyledCode>
         )

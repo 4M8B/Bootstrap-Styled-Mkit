@@ -1,10 +1,10 @@
 /* 
     Attr's are the original styled-component attributes as stated on "https://bootstrap-styled.github.io/v4/".
     All ClassNames are original bootstrap classnames as found on "https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp"
-    and are by no means complete.
+    and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Dd Component -- Use the <Dd /> component to describe a term/name in a description list.
+    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
@@ -27,13 +27,17 @@ const theme = {
     init: {}
 }
 
-const StyledDd = styled(Dd)``
+const StyledDd = styled(Dd).attrs((props) => ({ 
+    className: ''
+})
+)``
 
 export default class MyStyledDd extends Component {
     render(){
+        const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDd theme={theme.init}>
+            <StyledDd {...props} theme={theme.init}>
                 {children}
             </StyledDd>
         )
