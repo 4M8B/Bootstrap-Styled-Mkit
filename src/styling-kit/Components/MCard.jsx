@@ -4,7 +4,7 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- The <Card> component can be used to visualize info into a place that's portable.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
@@ -19,9 +19,7 @@ ClassNames:
 - card-columns	
 - card-danger	
 - card-dark	
-- card-deck	
-- card-footer	
-- card-group	
+- card-footer		
 - card-header	
 - card-header-tabs	
 - card-header-pills	
@@ -90,9 +88,6 @@ $enable-hover-media-query: bool
 
 const theme = {
     init: {
-        '$card-border-width': '2px',
-        '$card-border-radius': "3",
-        '$card-border-color': "yellow",
     }
 }
 

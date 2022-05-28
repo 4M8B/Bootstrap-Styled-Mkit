@@ -4,30 +4,35 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <button> tag defines a clickable button.
+    Details Component -- The <input> tag specifies an input field where the user can enter data.
 */
-import React, { Component } from "react";
+import React, { Component } from "react"
 import styled from 'styled-components'
-import { Button } from '@bootstrap-styled/v4';
+import { Input } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: active block color cssModule disabled dropup focus hover onClick outline ref size tag theme 
+Atrrs: addon children cssModule indeterminate onChange ref size state static tag theme type
 
-ClassNames:
-- btn
-- btn-block
-- btn-dark
+ClassNames: CSS
 
 Theme-
 Variables:
+$enable-rounded: bool
+$enable-shadows: bool
+$enable-hover-media-query: bool
+$enable-transitions: bool
+$font-weight-normal: string
+$font-size-base: string
+$font-size-lg: string
+$font-size-sm: string
+$font-size-xs: string
 $btn-padding-x: string
 $btn-padding-y: string
 $btn-line-height: string
 $btn-font-weight: string
+$btn-transition: string
 $btn-box-shadow: string
-$btn-focus-box-shadow: string
-$btn-disabled-opacity: string
-$btn-active-box-shadow: string
+$btn-block-spacing-y: string
 $btn-primary-color: string
 $btn-primary-bg: string
 $btn-primary-border: string
@@ -47,34 +52,35 @@ $btn-danger-color: string
 $btn-danger-bg: string
 $btn-danger-border: string
 $btn-link-disabled-color: string
-$btn-padding-x-sm: string
-$btn-padding-y-sm: string
 $btn-padding-x-lg: string
 $btn-padding-y-lg: string
-$btn-block-spacing-y: string
+$btn-padding-x-sm: string
+$btn-padding-y-sm: string
 $btn-border-radius: string
 $btn-border-radius-lg: string
 $btn-border-radius-sm: string
-$btn-transition: string
-$btn-border-width: string
+$input-btn-border-width: string
+$link-color: string
+$link-hover-color: string
 $link-hover-decoration: string
-$enable-rounded: bool
-$enable-shadows: bool
-$enable-hover-media-query: bool
-$enable-transitions: bool
+$cursor-disabled: string
 */
 
 
-const StyledButton = styled(Button).attrs((props) => ({
-    className: 'btn btn-primary'
-    })
+const StyledInput = styled(Input).attrs((props) => ({ 
+    className: ''
+})
 )``
 
-export default class MyStyledButton extends Component {
-    render() {
+
+export default class MyStyledInput extends Component {
+    render(){
         const {...props} = this.props
+        const { children } = this.props
         return(
-            <StyledButton {...props} />
+            <StyledInput {...props}>
+                {children}
+            </StyledInput>
         )
     }
 }

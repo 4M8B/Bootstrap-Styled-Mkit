@@ -4,34 +4,48 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- Use the <kbd> to indicate input that is typically entered via keyboard.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Details } from '@bootstrap-styled/v4'
+import { Kbd } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: children theme
 
 ClassNames: CSS
 
 Theme-
-Variables: None
-
+Variables: 
+$enable-rounded: bool
+$enable-shadows: bool
+$font-family-monospace: string
+$font-weight-bold: string
+$border-radius-sm: string
+$code-font-size: string
+$code-padding-x: string
+$code-padding-y: string
+$kbd-color: string
+$kbd-bg: string
+$kbd-box-shadow: string
+$nested-kbd-font-weight: string
 */
-const StyledDetails = styled(Details).attrs((props) => ({ 
+
+
+const StyledKbd = styled(Kbd).attrs((props) => ({ 
     className: ''
 })
 )``
 
-export default class MyStyledDetails extends Component {
+
+export default class MyStyledKbd extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDetails {...props}>
+            <StyledKbd {...props}>
                 {children}
-            </StyledDetails>
+            </StyledKbd>
         )
     }
 }

@@ -4,11 +4,11 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- The <map> tag is used to define an image map. An image map is an image with clickable areas.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Details } from '@bootstrap-styled/v4'
+import { Map } from '@bootstrap-styled/v4'
 
 /*
 Atrrs: None
@@ -17,21 +17,23 @@ ClassNames: CSS
 
 Theme-
 Variables: None
-
 */
-const StyledDetails = styled(Details).attrs((props) => ({ 
+
+
+const StyledMap = styled(Map).attrs((props) => ({ 
     className: ''
 })
 )``
 
-export default class MyStyledDetails extends Component {
+
+export default class MyStyledMap extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDetails {...props}>
+            <StyledMap {...props}>
                 {children}
-            </StyledDetails>
+            </StyledMap>
         )
     }
 }

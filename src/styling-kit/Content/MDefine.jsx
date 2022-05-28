@@ -4,7 +4,7 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- The <dfn> tag stands for the "definition element", and it specifies a term that is going to be defined within the content.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
@@ -13,7 +13,7 @@ import { Dfn } from '@bootstrap-styled/v4'
 /*
 Atrrs: None
 
-ClassNames: None
+ClassNames: CSS
 
 Theme-
 Variables: None

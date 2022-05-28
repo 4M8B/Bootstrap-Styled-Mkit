@@ -4,34 +4,39 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- The <hr> tag defines a thematic break in an HTML page.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Details } from '@bootstrap-styled/v4'
+import { Hr } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: theme
 
 ClassNames: CSS
 
 Theme-
-Variables: None
-
+Variables:
+$spacer-y: string
+$hr-border-width: string
+$hr-border-color: string
 */
-const StyledDetails = styled(Details).attrs((props) => ({ 
+
+
+const StyledHr = styled(Hr).attrs((props) => ({ 
     className: ''
 })
 )``
 
-export default class MyStyledDetails extends Component {
+
+export default class MyStyledHr extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDetails {...props}>
+            <StyledHr {...props}>
                 {children}
-            </StyledDetails>
+            </StyledHr>
         )
     }
 }

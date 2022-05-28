@@ -4,34 +4,39 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- The <mark> tag defines text that should be marked or highlighted.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Details } from '@bootstrap-styled/v4'
+import { Mark } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: theme
 
-ClassNames: CSS
+ClassNames:
+- mark
 
 Theme-
-Variables: None
-
+Variables:
+$mark-padding: string
+$mark-bg: string
 */
-const StyledDetails = styled(Details).attrs((props) => ({ 
+
+
+const StyledMark = styled(Mark).attrs((props) => ({ 
     className: ''
 })
 )``
 
-export default class MyStyledDetails extends Component {
+
+export default class MyStyledMark extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDetails {...props}>
+            <StyledMark {...props}>
                 {children}
-            </StyledDetails>
+            </StyledMark>
         )
     }
 }

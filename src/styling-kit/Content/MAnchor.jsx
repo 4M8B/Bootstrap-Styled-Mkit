@@ -4,7 +4,7 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- The <a> tag defines a hyperlink, which is used to link from one page to another.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
@@ -13,7 +13,7 @@ import { A } from '@bootstrap-styled/v4'
 /* 
 Attrs: color cssModule tag theme
 
-ClassNames: None
+ClassNames: CSS
 
 Theme-
 Variables:

@@ -4,34 +4,41 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- The <dt> tag defines a term/name in a description list.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Details } from '@bootstrap-styled/v4'
+import { Dt } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: theme
 
 ClassNames: CSS
 
 Theme-
-Variables: None
-
+Variables: 
+$dt-font-weight: string
+$grid-columns: string
+$grid-gutter-width: string
+$grid-breakpoints: object
+$enable-grid-classes: bool
 */
-const StyledDetails = styled(Details).attrs((props) => ({ 
+
+
+const StyledDt = styled(Dt).attrs((props) => ({ 
     className: ''
 })
 )``
 
-export default class MyStyledDetails extends Component {
+
+export default class MyStyledDt extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDetails {...props}>
+            <StyledDt {...props}>
                 {children}
-            </StyledDetails>
+            </StyledDt>
         )
     }
 }

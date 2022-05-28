@@ -4,11 +4,11 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- The <IssueIcon /> component shows an issue icon where you want it.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Details } from '@bootstrap-styled/v4'
+import { IssueIcon } from '@bootstrap-styled/v4'
 
 /*
 Atrrs: None
@@ -17,21 +17,20 @@ ClassNames: CSS
 
 Theme-
 Variables: None
-
 */
-const StyledDetails = styled(Details).attrs((props) => ({ 
+
+
+const StyledIssueIcon = styled(IssueIcon).attrs((props) => ({ 
     className: ''
 })
 )``
 
-export default class MyStyledDetails extends Component {
+
+export default class MyStyledIssueIcon extends Component {
     render(){
         const {...props} = this.props
-        const { children } = this.props
         return(
-            <StyledDetails {...props}>
-                {children}
-            </StyledDetails>
+            <StyledIssueIcon {...props} /> 
         )
     }
 }

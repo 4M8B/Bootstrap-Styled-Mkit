@@ -4,34 +4,36 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- An <Legend /> component defines a caption for the <Fieldset /> component
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Details } from '@bootstrap-styled/v4'
+import { Legend } from '@bootstrap-styled/v4'
 
 /*
 Atrrs: None
 
-ClassNames: CSS
+ClassNames: None
 
 Theme-
 Variables: None
-
 */
-const StyledDetails = styled(Details).attrs((props) => ({ 
+
+
+const StyledLegend = styled(Legend).attrs((props) => ({ 
     className: ''
 })
 )``
 
-export default class MyStyledDetails extends Component {
+
+export default class MyStyledLegend extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDetails {...props}>
+            <StyledLegend {...props}>
                 {children}
-            </StyledDetails>
+            </StyledLegend>
         )
     }
 }

@@ -4,11 +4,11 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Details /> component specifies additional details that the user can view or hide on demand.
+    Details Component -- The <fieldset> tag is used to group related elements in a form.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Details } from '@bootstrap-styled/v4'
+import { Fieldset } from '@bootstrap-styled/v4'
 
 /*
 Atrrs: None
@@ -16,22 +16,26 @@ Atrrs: None
 ClassNames: CSS
 
 Theme-
-Variables: None
-
+Variables:
+$grid-gutter-width: string
+$enable-grid-classes: bool
 */
-const StyledDetails = styled(Details).attrs((props) => ({ 
+
+
+const StyledCol = styled(Fieldset).attrs((props) => ({ 
     className: ''
 })
 )``
 
-export default class MyStyledDetails extends Component {
+
+export default class MyStyledFieldset extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDetails {...props}>
+            <StyledFieldset {...props}>
                 {children}
-            </StyledDetails>
+            </StyledFieldset>
         )
     }
 }
