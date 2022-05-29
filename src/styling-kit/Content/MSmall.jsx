@@ -4,36 +4,39 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- An <Legend /> component defines a caption for the <Fieldset /> component
+    Details Component -- The <Small> tag defines smaller text.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Legend } from '@bootstrap-styled/v4'
+import { Small } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: children color cssModule tag theme
 
-ClassNames: CSS
+ClassNames: 
+- small
+
 
 Theme-
-Variables: None
+Variables:
+$small-font-size: string
 */
 
 
-const StyledLegend = styled(Legend).attrs((props) => ({ 
+const StyledSmall = styled(Small).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledLegend extends Component {
+export default class MyStyledSmall extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledLegend {...props}>
+            <StyledSmall {...props}>
                 {children}
-            </StyledLegend>
+            </StyledSmall>
         )
     }
 }

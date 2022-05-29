@@ -4,14 +4,15 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- An <Legend /> component defines a caption for the <Fieldset /> component
+    Details Component -- The <Accordion> component specifies Accordionumn properties for each Accordionumn within a <Accordiongroup> element.
+    In order to work, this component must wrapped inside a <AccordionGroup /> component, if you want to use only one accordion, you might use <Collapse /> component.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Legend } from '@bootstrap-styled/v4'
+import { Accordion } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: delay heading name tag 
 
 ClassNames: CSS
 
@@ -20,20 +21,20 @@ Variables: None
 */
 
 
-const StyledLegend = styled(Legend).attrs((props) => ({ 
+const StyledAccordion = styled(Accordion).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledLegend extends Component {
+export default class MyStyledAccordion extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledLegend {...props}>
+            <StyledAccordion {...props}>
                 {children}
-            </StyledLegend>
+            </StyledAccordion>
         )
     }
 }

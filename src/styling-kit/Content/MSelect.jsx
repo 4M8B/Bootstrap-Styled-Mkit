@@ -4,36 +4,37 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- An <Legend /> component defines a caption for the <Fieldset /> component
+    Details Component -- The <Select> element is used to create a drop-down list.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Legend } from '@bootstrap-styled/v4'
+import { Select } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: name id
 
 ClassNames: CSS
+
 
 Theme-
 Variables: None
 */
 
 
-const StyledLegend = styled(Legend).attrs((props) => ({ 
+const StyledSelect = styled(Select).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledLegend extends Component {
+export default class MyStyledSelect extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledLegend {...props}>
+            <StyledSelect {...props}>
                 {children}
-            </StyledLegend>
+            </StyledSelect>
         )
     }
 }

@@ -4,36 +4,38 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- An <Legend /> component defines a caption for the <Fieldset /> component
+    Details Component -- The <Ol> tag defines a ordered list.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Legend } from '@bootstrap-styled/v4'
+import { Ol } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: theme
 
 ClassNames: CSS
+- list-unstyled
 
 Theme-
-Variables: None
+Variables:
+$list-inline-padding: string
 */
 
 
-const StyledLegend = styled(Legend).attrs((props) => ({ 
+const StyledOl = styled(Ol).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledLegend extends Component {
+export default class MyStyledOl extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledLegend {...props}>
+            <StyledOl {...props}>
                 {children}
-            </StyledLegend>
+            </StyledOl>
         )
     }
 }

@@ -4,36 +4,37 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- An <Legend /> component defines a caption for the <Fieldset /> component
+    Details Component -- The <Samp /> component is a phrase tag. It defines sample output from a computer program.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Legend } from '@bootstrap-styled/v4'
+import { Samp } from '@bootstrap-styled/v4'
 
 /*
 Atrrs: None
 
 ClassNames: CSS
 
+
 Theme-
 Variables: None
 */
 
 
-const StyledLegend = styled(Legend).attrs((props) => ({ 
+const StyledSamp = styled(Samp).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledLegend extends Component {
+export default class MyStyledSamp extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledLegend {...props}>
+            <StyledSamp {...props}>
                 {children}
-            </StyledLegend>
+            </StyledSamp>
         )
     }
 }

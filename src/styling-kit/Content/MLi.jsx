@@ -4,36 +4,47 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- An <Legend /> component defines a caption for the <Fieldset /> component
+    Details Component -- The <li> tag defines a list item.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Legend } from '@bootstrap-styled/v4'
+import { Li } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: active children cssModule disabled dropdown-footer dropdown-header dropdown-item	inline media separator tag theme
 
 ClassNames: CSS
+- list-group-item
+- list-group-item-action
+- list-group-item-danger
+- list-group-item-dark
+- list-group-item-info
+- list-group-item-light
+- list-group-item-primary
+- list-group-item-success
+- list-group-item-warning
+- list-inline-item
 
 Theme-
-Variables: None
+Variables:
+$list-inline-padding: string
 */
 
 
-const StyledLegend = styled(Legend).attrs((props) => ({ 
+const StyledLi = styled(Li).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledLegend extends Component {
+export default class MyStyledLi extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledLegend {...props}>
+            <StyledLi {...props}>
                 {children}
-            </StyledLegend>
+            </StyledLi>
         )
     }
 }

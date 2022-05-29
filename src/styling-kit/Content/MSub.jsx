@@ -4,36 +4,37 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- An <Legend /> component defines a caption for the <Fieldset /> component
+    Details Component -- The <sub> tag defines subscript text.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Legend } from '@bootstrap-styled/v4'
+import { Sub } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: children color cssModule tag theme
 
-ClassNames: CSS
+ClassNames: None
+
 
 Theme-
 Variables: None
 */
 
 
-const StyledLegend = styled(Legend).attrs((props) => ({ 
+const StyledSub = styled(Sub).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledLegend extends Component {
+export default class MyStyledSub extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledLegend {...props}>
+            <StyledSub {...props}>
                 {children}
-            </StyledLegend>
+            </StyledSub>
         )
     }
 }

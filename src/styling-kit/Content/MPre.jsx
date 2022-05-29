@@ -4,36 +4,42 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- An <Legend /> component defines a caption for the <Fieldset /> component
+    Details Component -- The <Pre> tag defines preformatted text.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Legend } from '@bootstrap-styled/v4'
+import { Pre } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: theme
 
-ClassNames: CSS
+ClassNames: 
+- pre-scrollable
+
 
 Theme-
-Variables: None
+Variables:
+$code-font-size: string
+$pre-color: string
+$pre-scrollable-max-height: string
+$font-family-monospace: string
 */
 
 
-const StyledLegend = styled(Legend).attrs((props) => ({ 
+const StyledPre = styled(Pre).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledLegend extends Component {
+export default class MyStyledPre extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledLegend {...props}>
+            <StyledPre {...props}>
                 {children}
-            </StyledLegend>
+            </StyledPre>
         )
     }
 }
