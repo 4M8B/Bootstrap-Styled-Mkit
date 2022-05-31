@@ -22,6 +22,9 @@ Variables:
 $small-font-size: string
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledSmall = styled(Small).attrs((props) => ({ 
     className: ''
@@ -34,7 +37,7 @@ export default class MyStyledSmall extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledSmall {...props}>
+            <StyledSmall {...props} theme={theme.init}>
                 {children}
             </StyledSmall>
         )

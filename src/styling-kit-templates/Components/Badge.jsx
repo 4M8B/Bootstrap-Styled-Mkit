@@ -36,6 +36,10 @@ $enable-rounded: bool
 $enable-hover-media-query: bool
 */
 
+const theme = {
+    init: {
+    }
+}
 
 const StyledBadge = styled(Badge).attrs((props) => ({ 
     className: ''
@@ -48,7 +52,7 @@ export default class MyStyledBadge extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledBadge {...props}>
+            <StyledBadge {...props} theme={theme.init}>
                 {children}
             </StyledBadge>
         )

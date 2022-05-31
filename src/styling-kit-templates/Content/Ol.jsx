@@ -13,7 +13,7 @@ import { Ol } from '@bootstrap-styled/v4'
 /*
 Atrrs: theme
 
-ClassNames: CSS
+ClassNames:
 - list-unstyled
 
 Theme-
@@ -21,6 +21,9 @@ Variables:
 $list-inline-padding: string
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledOl = styled(Ol).attrs((props) => ({ 
     className: ''
@@ -33,7 +36,7 @@ export default class MyStyledOl extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledOl {...props}>
+            <StyledOl {...props} theme={theme.init}>
                 {children}
             </StyledOl>
         )

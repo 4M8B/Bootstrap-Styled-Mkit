@@ -4,14 +4,14 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Sup> tag defines superscript text. 
+    Details Component -- The <Collapse> component, Add react state and handleClick function and Manage easily dismissing content like modals and alerts or any other components.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Sup } from '@bootstrap-styled/v4'
+import { Collapse } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: isOpen
 
 ClassNames: CSS
 
@@ -20,16 +20,19 @@ Variables: None
 */
 
 
-const StyledSup = styled(Sup).attrs((props) => ({ 
+const StyledCollapse = styled(Collapse).attrs((props) => ({ 
     className: ''
 })
 )``
 
-
-export default class MyStyledSup extends Component {
+export default class MyStyledCollapse extends Component {
     render(){
+        const {...props} = this.props
+        const { children } = this.props
         return(
-            <StyledSup />
+            <StyledCollapse {...props}>
+                {children}
+            </StyledCollapse>
         )
     }
 }

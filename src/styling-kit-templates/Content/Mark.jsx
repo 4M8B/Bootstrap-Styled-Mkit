@@ -13,8 +13,7 @@ import { Mark } from '@bootstrap-styled/v4'
 /*
 Atrrs: theme
 
-ClassNames:
-- mark
+ClassNames: CSS
 
 Theme-
 Variables:
@@ -22,6 +21,9 @@ $mark-padding: string
 $mark-bg: string
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledMark = styled(Mark).attrs((props) => ({ 
     className: ''
@@ -34,7 +36,7 @@ export default class MyStyledMark extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledMark {...props}>
+            <StyledMark {...props} theme={theme.init}>
                 {children}
             </StyledMark>
         )

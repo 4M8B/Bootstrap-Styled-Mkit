@@ -21,6 +21,9 @@ $grid-gutter-width: string
 $enable-grid-classes: bool
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledDl = styled(Dl).attrs((props) => ({ 
     className: ''
@@ -33,7 +36,7 @@ export default class MyStyledDl extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDl {...props}>
+            <StyledDl {...props} theme={theme.init}>
                 {children}
             </StyledDl>
         )

@@ -14,7 +14,6 @@ import { Blockquote } from '@bootstrap-styled/v4'
 Atrrs: cssModule reverse tag theme
 
 ClassNames:
-- blockquote
 - blockquote-footer
 
 Theme-

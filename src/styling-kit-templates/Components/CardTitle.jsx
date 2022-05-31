@@ -4,14 +4,14 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Sup> tag defines superscript text. 
+    Details Component -- The <CardTitle> adds a title to any heading element inside the card.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Sup } from '@bootstrap-styled/v4'
+import { CardTitle } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: cssModule tag
 
 ClassNames: CSS
 
@@ -20,16 +20,20 @@ Variables: None
 */
 
 
-const StyledSup = styled(Sup).attrs((props) => ({ 
+const StyledCardTitle = styled(CardTitle).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledSup extends Component {
+export default class MyStyledCardTitle extends Component {
     render(){
+        const {...props} = this.props
+        const { children } = this.props
         return(
-            <StyledSup />
+            <StyledCardTitle {...props}>
+                {children}
+            </StyledCardTitle>
         )
     }
 }

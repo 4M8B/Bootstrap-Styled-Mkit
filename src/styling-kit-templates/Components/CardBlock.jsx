@@ -4,14 +4,14 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Sup> tag defines superscript text. 
+    Details Component -- The <CardBlock> component is an easy way to group your card-layout components.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Sup } from '@bootstrap-styled/v4'
+import { CardBlock } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: cssModule tag
 
 ClassNames: CSS
 
@@ -20,16 +20,20 @@ Variables: None
 */
 
 
-const StyledSup = styled(Sup).attrs((props) => ({ 
+const StyledCardBlock = styled(CardBlock).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledSup extends Component {
+export default class MyStyledCardBlock extends Component {
     render(){
+        const {...props} = this.props
+        const { children } = this.props
         return(
-            <StyledSup />
+            <StyledCardBlock {...props}>
+                {children}
+            </StyledCardBlock>
         )
     }
 }

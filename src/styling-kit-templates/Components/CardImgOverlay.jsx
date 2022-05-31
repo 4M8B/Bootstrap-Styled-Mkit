@@ -4,14 +4,14 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Sup> tag defines superscript text. 
+    Details Component -- The <CardImgOverlay> turns an image into a card background. Often used to add text on top of the image.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Sup } from '@bootstrap-styled/v4'
+import { CardImgOverlay } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: cssModule tag
 
 ClassNames: CSS
 
@@ -20,16 +20,20 @@ Variables: None
 */
 
 
-const StyledSup = styled(Sup).attrs((props) => ({ 
+const StyledCardImgOverlay = styled(CardImgOverlay).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledSup extends Component {
+export default class MyStyledCardImgOverlay extends Component {
     render(){
+        const {...props} = this.props
+        const { children } = this.props
         return(
-            <StyledSup />
+            <StyledCardImgOverlay {...props}>
+                {children}
+            </StyledCardImgOverlay>
         )
     }
 }

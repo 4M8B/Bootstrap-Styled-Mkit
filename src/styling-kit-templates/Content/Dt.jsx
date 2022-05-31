@@ -24,6 +24,9 @@ $grid-breakpoints: object
 $enable-grid-classes: bool
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledDt = styled(Dt).attrs((props) => ({ 
     className: ''
@@ -36,7 +39,7 @@ export default class MyStyledDt extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDt {...props}>
+            <StyledDt {...props} theme={theme.init}>
                 {children}
             </StyledDt>
         )

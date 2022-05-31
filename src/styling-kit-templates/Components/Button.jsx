@@ -14,7 +14,6 @@ import { Button } from '@bootstrap-styled/v4';
 Atrrs: active block color cssModule disabled dropup focus hover onClick outline ref size tag theme 
 
 ClassNames:
-- btn
 - btn-block
 - btn-dark
 
@@ -64,6 +63,9 @@ $enable-hover-media-query: bool
 $enable-transitions: bool
 */
 
+const theme = {
+    init : {}
+}
 
 const StyledButton = styled(Button).attrs((props) => ({
     className: 'btn btn-primary'
@@ -74,7 +76,7 @@ export default class MyStyledButton extends Component {
     render() {
         const {...props} = this.props
         return(
-            <StyledButton {...props} />
+            <StyledButton {...props} theme={theme.init} />
         )
     }
 }

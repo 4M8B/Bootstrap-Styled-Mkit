@@ -4,39 +4,16 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Card> component can be used to visualize info into a place that's portable.
+    Details Component -- The <CardColumns> component is used when creating different columns of card components.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Card } from '@bootstrap-styled/v4'
+import { CardColumns } from '@bootstrap-styled/v4'
 
-/* 
-Attrs: backgroundColor block borderColor color cssModule focus hover inverse outline tag theme
+/*
+Atrrs: cssModule tag theme
 
-ClassNames:
-- card
-- card-body	
-- card-columns	
-- card-danger	
-- card-dark	
-- card-footer		
-- card-header	
-- card-header-tabs	
-- card-header-pills	
-- card-img-bottom	
-- card-img-overlay	
-- card-img-top	
-- card-img-top	
-- card-light	
-- card-link	
-- card-primary	
-- card-secondary	
-- card-subtitle	
-- card-success	
-- card-text	
-- card-title	
-- card-warning	
-
+ClassNames: CSS
 
 Theme-
 Variables:
@@ -56,8 +33,6 @@ $card-cap-bg: string
 $card-bg: string
 $card-link-hover-color: string
 $card-img-overlay-padding: string
-$card-margin-y-halved: string
-$card-margin-x-halved: string
 $card-columns-count-md: string
 $card-columns-gap-md: string
 $card-columns-margin-md: string
@@ -86,24 +61,24 @@ $enable-hover-media-query: bool
 */
 
 const theme = {
-    init: {
-    }
+    init : {}
 }
 
-const StyledCard = styled(Card).attrs((props) => ({ 
+
+const StyledCardColumns = styled(CardColumns).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledCard extends Component {
+export default class MyStyledCardColumns extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledCard {...props} theme={theme.init}>
+            <StyledCardColumns {...props} theme={theme.init}>
                 {children}
-            </StyledCard>
+            </StyledCardColumns>
         )
     }
 }

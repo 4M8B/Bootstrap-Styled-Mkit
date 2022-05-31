@@ -13,9 +13,7 @@ import { CardGroup } from '@bootstrap-styled/v4';
 /* 
 Attrs: cssModule tag theme
 
-Classnames:
-- card-group
-- card-deck	
+Classnames: CSS
 
 Theme-
 Variables:

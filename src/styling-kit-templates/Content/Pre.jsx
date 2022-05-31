@@ -16,7 +16,6 @@ Atrrs: theme
 ClassNames: 
 - pre-scrollable
 
-
 Theme-
 Variables:
 $code-font-size: string
@@ -25,6 +24,9 @@ $pre-scrollable-max-height: string
 $font-family-monospace: string
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledPre = styled(Pre).attrs((props) => ({ 
     className: ''
@@ -37,7 +39,7 @@ export default class MyStyledPre extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledPre {...props}>
+            <StyledPre {...props} theme={theme.init}>
                 {children}
             </StyledPre>
         )

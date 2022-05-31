@@ -13,7 +13,7 @@ import { Ul } from '@bootstrap-styled/v4'
 /*
 Atrrs: inline tag theme toggleable unstyled
 
-ClassNames: None
+ClassNames: CSS
 
 Theme-
 Variables:
@@ -64,6 +64,9 @@ $navbar-inverse-toggler-bg: string
 $navbar-inverse-disabled-color: string
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledUl = styled(Ul).attrs((props) => ({ 
     className: ''
@@ -76,7 +79,7 @@ export default class MyStyledUl extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledUl {...props}>
+            <StyledUl {...props} theme={theme.init}>
                 {children}
             </StyledUl>
         )

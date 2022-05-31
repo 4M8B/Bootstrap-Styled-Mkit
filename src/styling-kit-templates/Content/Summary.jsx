@@ -13,7 +13,7 @@ import { Summary } from '@bootstrap-styled/v4'
 /*
 Atrrs: None
 
-ClassNames: None
+ClassNames: CSS
 
 Theme-
 Variables: None

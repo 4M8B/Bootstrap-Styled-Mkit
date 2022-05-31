@@ -13,8 +13,7 @@ import { Close } from '@bootstrap-styled/v4'
 /*
 Atrrs: onDismiss closeLabel cssModule sr-only theme
 
-ClassNames:
-- close
+ClassNames: CSS
 
 Theme-
 Variables:

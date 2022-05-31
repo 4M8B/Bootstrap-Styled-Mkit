@@ -22,6 +22,9 @@ $hr-border-width: string
 $hr-border-color: string
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledHr = styled(Hr).attrs((props) => ({ 
     className: ''
@@ -34,7 +37,7 @@ export default class MyStyledHr extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledHr {...props}>
+            <StyledHr {...props} theme={theme.init}>
                 {children}
             </StyledHr>
         )

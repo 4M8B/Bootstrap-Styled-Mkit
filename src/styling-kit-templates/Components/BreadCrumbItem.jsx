@@ -4,14 +4,14 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Sup> tag defines superscript text. 
+    Details Component -- The <BreadcrumbItem> component Creates an Item inside a <BreadCrumb>.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Sup } from '@bootstrap-styled/v4'
+import { BreadcrumbItem } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: None
+Atrrs: active cssModule tag
 
 ClassNames: CSS
 
@@ -20,16 +20,18 @@ Variables: None
 */
 
 
-const StyledSup = styled(Sup).attrs((props) => ({ 
+const StyledBreadcrumbItem = styled(BreadcrumbItem).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledSup extends Component {
+export default class MyStyledBreadcrumbItem extends Component {
     render(){
+        const {...props} = this.props
+        const { children } = this.props
         return(
-            <StyledSup />
+            <StyledBreadcrumbItem {...props} />
         )
     }
 }

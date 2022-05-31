@@ -21,6 +21,9 @@ $grid-gutter-width: string
 $enable-grid-classes: bool
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledCol = styled(Fieldset).attrs((props) => ({ 
     className: ''
@@ -33,7 +36,7 @@ export default class MyStyledFieldset extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledFieldset {...props}>
+            <StyledFieldset {...props} theme={theme.init}>
                 {children}
             </StyledFieldset>
         )

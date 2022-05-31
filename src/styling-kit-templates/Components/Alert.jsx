@@ -14,7 +14,6 @@ import { Alert } from '@bootstrap-styled/v4'
 Atrrs: autoHideDuration children color cssModule initializeIsOpen isOpen onClick tag theme transition uncontrolled
 
 ClassNames:
-- alert
 - alert-danger
 - alert-dark
 - alert-dismissible
@@ -50,6 +49,10 @@ $alert-danger-border: string
 $enable-rounded: bool
 */
 
+const theme = {
+    init: {
+    }
+}
 
 const StyledAlert = styled(Alert).attrs((props) => ({ 
     className: ''
@@ -62,7 +65,7 @@ export default class MyStyledAlert extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledAlert {...props}>
+            <StyledAlert {...props} theme={theme.init}>
                 {children}
             </StyledAlert>
         )

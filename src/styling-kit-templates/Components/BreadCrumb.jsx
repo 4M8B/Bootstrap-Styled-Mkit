@@ -4,51 +4,49 @@
     and are by no means complete. For more classes search Bootstrap related info-pages.
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- Use the <kbd> to indicate input that is typically entered via keyboard.
+    Details Component -- The <Breadcrumb> component Creates an Item inside a <Breadcrumb>.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
-import { Kbd } from '@bootstrap-styled/v4'
+import { Breadcrumb } from '@bootstrap-styled/v4'
 
 /*
-Atrrs: children theme
+Atrrs: cssModule tag theme
 
 ClassNames: CSS
 
 Theme-
-Variables: 
+Variables:
+$breadcrumb-padding-y: string
+$breadcrumb-padding-x: string
+$breadcrumb-item-padding: string
+$breadcrumb-bg: string
+$breadcrumb-divider-color: string
+$breadcrumb-active-color: string
+$breadcrumb-divider: string
+$spacer-y: string
 $enable-rounded: bool
-$enable-shadows: bool
-$font-family-monospace: string
-$font-weight-bold: string
-$border-radius-sm: string
-$code-font-size: string
-$code-padding-x: string
-$code-padding-y: string
-$kbd-color: string
-$kbd-bg: string
-$kbd-box-shadow: string
-$nested-kbd-font-weight: string
 */
 
 const theme = {
-    init: {}
+    init: {
+    }
 }
 
-const StyledKbd = styled(Kbd).attrs((props) => ({ 
+const StyledBreadcrumb = styled(Breadcrumb).attrs((props) => ({ 
     className: ''
 })
 )``
 
 
-export default class MyStyledKbd extends Component {
+export default class MyStyledBreadcrumb extends Component {
     render(){
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledKbd {...props} theme={theme.init}>
+            <StyledBreadcrumb {...props} theme={theme.init}>
                 {children}
-            </StyledKbd>
+            </StyledBreadcrumb>
         )
     }
 }

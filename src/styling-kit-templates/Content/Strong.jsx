@@ -13,8 +13,7 @@ import { Strong } from '@bootstrap-styled/v4'
 /*
 Atrrs: children color cssModule
 
-ClassNames: None
-
+ClassNames: CSS
 
 Theme-
 Variables: None

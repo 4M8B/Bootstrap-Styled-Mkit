@@ -13,7 +13,7 @@ import { Li } from '@bootstrap-styled/v4'
 /*
 Atrrs: active children cssModule disabled dropdown-footer dropdown-header dropdown-item	inline media separator tag theme
 
-ClassNames: CSS
+ClassNames:
 - list-group-item
 - list-group-item-action
 - list-group-item-danger
@@ -30,6 +30,9 @@ Variables:
 $list-inline-padding: string
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledLi = styled(Li).attrs((props) => ({ 
     className: ''
@@ -42,7 +45,7 @@ export default class MyStyledLi extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledLi {...props}>
+            <StyledLi {...props} theme={theme.init}>
                 {children}
             </StyledLi>
         )

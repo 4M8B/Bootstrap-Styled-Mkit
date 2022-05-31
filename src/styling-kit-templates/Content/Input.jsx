@@ -66,6 +66,9 @@ $link-hover-decoration: string
 $cursor-disabled: string
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledInput = styled(Input).attrs((props) => ({ 
     className: ''
@@ -78,7 +81,7 @@ export default class MyStyledInput extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledInput {...props}>
+            <StyledInput {...props} theme={theme.init}>
                 {children}
             </StyledInput>
         )

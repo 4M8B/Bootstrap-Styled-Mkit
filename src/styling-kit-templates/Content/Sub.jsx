@@ -13,8 +13,7 @@ import { Sub } from '@bootstrap-styled/v4'
 /*
 Atrrs: children color cssModule tag theme
 
-ClassNames: None
-
+ClassNames: CSS
 
 Theme-
 Variables: None

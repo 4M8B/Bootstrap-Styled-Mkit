@@ -36,6 +36,9 @@ $lead-font-size: string
 $lead-font-weight: string
 */
 
+const theme = {
+    init: {}
+}
 
 const StyledH4 = styled(H4).attrs((props) => ({ 
     className: ''
@@ -48,7 +51,7 @@ export default class MyStyledH4 extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledH4 {...props}>
+            <StyledH4 {...props} theme={theme.init}>
                 {children}
             </StyledH4>
         )
