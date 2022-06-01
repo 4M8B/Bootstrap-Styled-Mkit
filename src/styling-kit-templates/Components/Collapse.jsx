@@ -2,9 +2,11 @@
     Attr's are the original styled-component attributes as stated on "https://bootstrap-styled.github.io/v4/".
     All ClassNames are original bootstrap classnames as found on "https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp"
     and are by no means complete. For more classes search Bootstrap related info-pages.
+    More info on "https://getbootstrap.com/docs/4.0/getting-started/introduction/".
+
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <Collapse> component, Add react state and handleClick function and Manage easily dismissing content like modals and alerts or any other components.
+    Details Component -- The <Collapse> component to manage easily dismissing content like modals and alerts or any other components.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'

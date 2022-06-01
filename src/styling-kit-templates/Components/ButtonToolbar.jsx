@@ -6,19 +6,16 @@
 
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <ButtonGroup> component to wrap different buttons.
+    Details Component -- The <ButtonToolbar> component to add different styles of s.
 */
-import React, { Component } from "react"
+import React, { Component } from "react";
 import styled from 'styled-components'
-import { ButtonGroup } from '@bootstrap-styled/v4'
+import { ButtonToolbar } from '@bootstrap-styled/v4';
 
 /*
-Atrrs: cssModule role size tag theme vertical
+Atrrs: cssModule tag theme 
 
-ClassNames:
-- btn-group-lg
-- btn-group-sm
-- btn-group-vertical
+ClassNames: None
 
 Theme-
 Variables:
@@ -41,20 +38,19 @@ const theme = {
     init : {}
 }
 
-const StyledButtonGroup = styled(ButtonGroup).attrs((props) => ({ 
-    className: ''
-})
+const StyledButtonToolbar = styled(ButtonToolbar).attrs((props) => ({
+    className: 'btn btn-primary'
+    })
 )``
 
-
-export default class MyStyledButtonGroup extends Component {
-    render(){
+export default class MyStyledButtonToolbar extends Component {
+    render() {
         const {...props} = this.props
-        const { children } = this.props
+        const {children} = this.props
         return(
-            <StyledButtonGroup {...props} theme={theme.init}>
+            <StyledButtonToolbar {...props} theme={theme.init}>
                 {children}
-            </StyledButtonGroup>
+            </StyledButtonToolbar>
         )
     }
 }

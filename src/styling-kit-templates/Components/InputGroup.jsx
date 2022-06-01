@@ -6,7 +6,7 @@
 
     Most Attr's can be taken as className but not all of them.
 
-    Details Component -- The <InputGroup> component to toggle contextual overlays for displaying lists of links and more.
+    Details Component -- The <InputGroup> component to use with <InputGroupAddon /> and <InputGroupButton /> components.
 */
 import React, { Component } from "react"
 import styled from 'styled-components'
