@@ -74,7 +74,7 @@ export default class MyStyledInputGroup extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledInputGroup {...props}>
+            <StyledInputGroup {...props} theme={theme.init}>
                 {children}
             </StyledInputGroup>
         )

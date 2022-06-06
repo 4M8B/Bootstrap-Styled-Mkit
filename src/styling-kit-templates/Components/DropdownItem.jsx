@@ -44,7 +44,7 @@ export default class MyStyledDropdownItem extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDropdownItem {...props}>
+            <StyledDropdownItem {...props} theme={theme.init}>
                 {children}
             </StyledDropdownItem>
         )

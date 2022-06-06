@@ -50,6 +50,10 @@ $state-warning-bg: string
 $state-danger-bg: string
 */
 
+const theme = {
+    init: {}
+}
+
 const StyledTable = styled(Table).attrs((props) => ({ 
     className: ''
 })
@@ -60,7 +64,7 @@ export default class MyStyledTable extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledTable {...props}>
+            <StyledTable {...props} theme={theme.init}>
                 {children}
             </StyledTable>
         )

@@ -44,7 +44,7 @@ export default class MyStyledDrawer extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledDrawer {...props}>
+            <StyledDrawer {...props} theme={theme.init}>
                 {children}
             </StyledDrawer>
         )

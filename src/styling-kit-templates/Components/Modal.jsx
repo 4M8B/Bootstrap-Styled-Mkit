@@ -56,6 +56,10 @@ $modal-footer-border-color: string
 $modal-footer-border-width: string
 */
 
+const theme = {
+    init: {}
+}
+
 const StyledModal = styled(Modal).attrs((props) => ({ 
     className: ''
 })
@@ -66,7 +70,7 @@ export default class MyStyledModal extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledModal {...props}>
+            <StyledModal {...props} theme={theme.init}>
                 {children}
             </StyledModal>
         )

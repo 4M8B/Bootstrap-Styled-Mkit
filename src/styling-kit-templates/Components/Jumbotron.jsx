@@ -26,6 +26,10 @@ $jumbotron-padding: string
 $jumbotron-bg: string
 */
 
+const theme = {
+    init: {}
+}
+
 const StyledJumbotron = styled(Jumbotron).attrs((props) => ({ 
     className: ''
 })
@@ -36,7 +40,7 @@ export default class MyStyledJumbotron extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledJumbotron {...props}>
+            <StyledJumbotron {...props} theme={theme.init}>
                 {children}
             </StyledJumbotron>
         )

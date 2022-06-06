@@ -66,6 +66,10 @@ $navbar-inverse-toggler-bg: string
 $navbar-inverse-disabled-color: string
 */
 
+const theme = {
+    init: {}
+}
+
 const StyledNavbar = styled(Navbar).attrs((props) => ({ 
     className: ''
 })
@@ -76,7 +80,7 @@ export default class MyStyledNavbar extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledNavbar {...props}>
+            <StyledNavbar {...props} theme={theme.init}>
                 {children}
             </StyledNavbar>
         )

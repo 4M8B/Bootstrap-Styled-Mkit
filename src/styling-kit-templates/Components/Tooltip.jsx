@@ -38,6 +38,10 @@ $tooltip-arrow-color: string
 $component-active-color: string
 */
 
+const theme = {
+    init: {}
+}
+
 const StyledTooltip = styled(Tooltip).attrs((props) => ({ 
     className: ''
 })
@@ -48,7 +52,7 @@ export default class MyStyledTooltip extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledTooltip {...props}>
+            <StyledTooltip {...props} theme={theme.init}>
                 {children}
             </StyledTooltip>
         )

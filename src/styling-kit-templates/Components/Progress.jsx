@@ -31,6 +31,10 @@ $progress-bar-bg: string
 $progress-bar-animation-timing: string
 */
 
+const theme = {
+    init: {}
+}
+
 const StyledProgress = styled(Progress).attrs((props) => ({ 
     className: ''
 })
@@ -41,7 +45,7 @@ export default class MyStyledProgress extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledProgress {...props}>
+            <StyledProgress {...props} theme={theme.init}>
                 {children}
             </StyledProgress>
         )

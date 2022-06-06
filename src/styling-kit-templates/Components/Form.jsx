@@ -161,7 +161,7 @@ export default class MyStyledForm extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledForm {...props}>
+            <StyledForm {...props} theme={theme.init}>
                 {children}
             </StyledForm>
         )

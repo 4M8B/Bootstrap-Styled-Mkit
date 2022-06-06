@@ -51,6 +51,10 @@ $state-danger-text: string
 $state-danger-bg: string
 */
 
+const theme = {
+    init: {}
+}
+
 const StyledListGroup = styled(ListGroup).attrs((props) => ({ 
     className: ''
 })
@@ -61,7 +65,7 @@ export default class MyStyledListGroup extends Component {
         const {...props} = this.props
         const { children } = this.props
         return(
-            <StyledListGroup {...props}>
+            <StyledListGroup {...props} theme={theme.init}>
                 {children}
             </StyledListGroup>
         )
