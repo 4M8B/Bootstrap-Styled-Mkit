@@ -27,7 +27,7 @@ const theme = {
     init: {}
 }
 
-const StyledCol = styled(Fieldset).attrs((props) => ({ 
+const StyledFieldset = styled(Fieldset).attrs((props) => ({ 
     className: ''
 })
 )``
